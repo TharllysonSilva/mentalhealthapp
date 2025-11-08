@@ -38,16 +38,7 @@ O projeto foi construído **do zero**, priorizando organização de código, reu
 ---
 
 ## 📂 Estrutura do projeto
-lib/
-├── main.dart
-├── screens/
-│ └── home_screen.dart
-├── widgets/
-│ ├── custom_card.dart
-│ ├── header_section.dart
-│ └── button_widget.dart
-└── theme/
-└── app_theme.dart
+<img width="342" height="285" alt="image" src="https://github.com/user-attachments/assets/d2318ce2-ffb4-49f2-aad8-9524a2e7120f" />
 
 💡 Próximos passos planejados
 
