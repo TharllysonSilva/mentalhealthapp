@@ -3,12 +3,12 @@ import 'package:mentalhealthapp/util/emoticon_face..dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  final TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,23 +88,36 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
                       borderRadius: BorderRadius.circular(12),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                          offset: Offset(0, 3),
+                        )
+                      ],
                     ),
-                    padding: const EdgeInsets.all(12),
-                    child: const Row(
-                      children: [
-                        Icon(
+                    child: TextField(
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                      cursorColor: Colors.white,
+                      controller: searchController,
+                      onChanged: (text) {},
+                      decoration: const InputDecoration(
+                        hintText: 'Pesquisar',
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                        prefixIcon: Icon(
                           Icons.search,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Pesquisar',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
+                        border: InputBorder.none,
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                      ),
                     ),
                   ),
                   const SizedBox(
